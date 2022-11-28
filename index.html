@@ -8,26 +8,87 @@
     <title></title>
 
     <link rel="stylesheet" href="css/test.css">
+    
+    <script>
+        
+    window.onload= function(){
+          // URLを取得
+            const url = new URL(window.location.href);
+        // consoleに受け取ったパラメータを出力
+            console.log(params);
+        // パラメータから「RoomNum」を取得
+            const username = params.get("RoomNum");
+    }
+        
+        
+    </script>
+    
+     <link rel="manifest" href="./manifest.json" />
+        <link rel="manifest" href="manifest.webmanifest" />
+        <script
+            async
+            src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
+            integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
+            crossorigin="anonymous"
+        ></script>
+     <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./sw.js')
+            }
+        </script>
+    
 </head>
 
 <body>
 
-    <h1>Hello</h1>
+    <body>
+        <div class="reader">
+            <video
+                id="js-video"
+                class="reader-video"
+                autoplay
+                playsinline
+            ></video>
+        </div>
 
-    <p>aaaaa</p>
-    <button type="button">  脳パーツ </button><br>
+        <div class="reticle">
+            <div class="reticle-box"></div>
+        </div>
 
-    <button type="button">  心臓パーツ </button><br>
+        <div style="display: none">
+            <canvas id="js-canvas"></canvas>
+        </div>
+     <div id="js-modal" class="modal-overlay">
+            <div class="modal">
+                <div class="modal-cnt">
+                    <span class="modal-title">読み取り結果</span>
+                    <textarea
+                        id="js-result"
+                        class="modal-result"
+                        value=""
+                        readonly
+                    /></textarea>
+                </div>
+                <a href="" id="js-link" class="modal-btn" target="_blank">
+                    開く
+                </a>
+                <button id="js-copy" class="modal-btn" target="_blank">
+                    コピー
+                </button>
+                <button type="button" id="js-modal-close" class="modal-btn">
+                    閉じる
+                </button>
+            </div>
+        </div>
 
-    <button type="button">  骨パーツ </button><br>
+        <div id="js-unsupported" class="unsupported">
+            <p class="unsupported-title">Sorry!</p>
+            <p>Unsupported browser</p>
+        </div>
 
-    <button type="button">  歯車パーツ </button><br>
-
-    <button type="button">  パーツ </button><br>
-
-    <button type="button">  パーツ </button><br>
-
-    <button type="button">  ENG </button><br>
+        <script src="./js/jsQR.js"></script>
+        <script src="./js/app.js"></script>
+    
 
 
 

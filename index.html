@@ -6,36 +6,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    
 
-    <link rel="stylesheet" href="css/test.css">
-    
-    <script>
-        
-    window.onload= function(){
-          // URLを取得
-            const url = new URL(window.location.href);
-        // consoleに受け取ったパラメータを出力
-            console.log(params);
-        // パラメータから「RoomNum」を取得
-            const username = params.get("RoomNum");
-    }
-        
-        
-    </script>
-    
-     <link rel="manifest" href="./manifest.json" />
-        <link rel="manifest" href="manifest.webmanifest" />
-        <script
-            async
-            src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
-            integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
-            crossorigin="anonymous"
-        ></script>
-     <script>
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('./sw.js')
-            }
-        </script>
     
      <style>
         form,p {

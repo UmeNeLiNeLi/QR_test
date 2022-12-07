@@ -16,7 +16,7 @@ body { width:100%; overflow:hidden; }
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 62.5%;/*rem算出をしやすくするために*/
+  font-size: 62.5%;
 }
 
 .btn,
@@ -43,12 +43,12 @@ button.btn {
   border-radius: 0.5rem;
 }
 
-
 .btn--orange,
 a.btn--orange {
   color: #fff;
   background-color: #eb6100;
 }
+
 .btn--orange:hover,
 a.btn--orange:hover {
   color: #fff;
@@ -56,5 +56,5 @@ a.btn--orange:hover {
 }
 
 a.btn--radius {
-   border-radius: 100vh;
+  border-radius: 100vh;
 }

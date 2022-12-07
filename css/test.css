@@ -1,60 +1,43 @@
-/* clearfix（任意で） */
-*:after { display:block; clear:both; }
-/* はみ出し対策 */
-body { width:100%; overflow:hidden; }
-/* ↓以下通常CSSを記載していく */
-
-
-/*まずはお決まりのボックスサイズ算出をborer-boxに */
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-.btn,
-a.btn,
-button.btn {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
+a.bt-samp,
+a.bt-samp:hover,
+a.bt-samp:visited{
+  display: block;
+  height: 28px;
+  width: 117px;
+  padding-left:1px;
   text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
+  line-height: 30px;
+  text-align: center;
+  color: #7d8383;
+  text-shadow: 0px 1px 0px #fafafa;
+  background: #fbfaf4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfaf4), to(#ece8e6));
+  background: -moz-linear-gradient(top,  #fbfaf4,  #ece8e6);
+  background: -o-linear-gradient(top,  #fbfaf4,  #ece8e6);
+  background: -ms-linear-gradient(top,  #fbfaf4,  #ece8e6);
+  background: linear-gradient(top,  #fbfaf4,  #ece8e6);
+  border: 1px solid #dcd9d8;
+  border-bottom: 1px solid #c1c1bd;
+  -webkit-box-shadow:  0 0 1px #c7c5c1;
+  -moz-box-shadow:  0 0 1px #c7c5c1;
+  box-shadow:  0 0 1px #c7c5c1;
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
 }
-
-.btn--orange,
-a.btn--orange {
-  color: #fff;
-  background-color: #eb6100;
+ 
+a.bt-samp:hover { /*マウスホバー時*/
+  color:#9a9f9f;
+  background: #fbfbf9;
 }
-
-.btn--orange:hover,
-a.btn--orange:hover {
-  color: #fff;
-  background: #f56500;
-}
-
-a.btn--radius {
-  border-radius: 100vh;
+ 
+a.bt-samp:active{  /* ボタンを押したとき */
+  background:#ece8e4;
+  border: none;
+  box-shadow:  0 1px 1px #cccbc9, inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
